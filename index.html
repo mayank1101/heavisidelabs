@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heaviside Labs — AI, Analytics &amp; Data Consultancy</title>
+    <meta
+      name="description"
+      content="Heaviside Labs builds AI applications, PoCs, and data platforms — turning raw, noisy data into decisive signal your team can understand, own, and run."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..600&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" id="topbar">
+      <div class="wrap topbar-inner">
+        <a class="brand" href="#top">
+          <img
+            class="brand-mark"
+            src="assets/mark.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <span class="brand-name">Heaviside Labs</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#approach">Approach</a>
+          <a class="nav-link" href="#clients">Clients</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <div class="topbar-actions">
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+          >
+            <svg
+              id="theme-icon-dark"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+            </svg>
+            <svg
+              id="theme-icon-light"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="display: none"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66 4.93 19.07M19.07 4.93l-1.41 1.41"
+              />
+            </svg>
+          </button>
+          <a class="btn btn-filled cta-desktop-only" href="#contact"
+            ><span class="state-layer"></span>Start a project</a
+          >
+          <button
+            class="icon-btn menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Primary">
+        <a class="mobile-menu-link" href="#services">Services</a>
+        <a class="mobile-menu-link" href="#approach">Approach</a>
+        <a class="mobile-menu-link" href="#clients">Clients</a>
+        <a class="mobile-menu-link" href="#about">About</a>
+        <a class="mobile-menu-link" href="#contact">Contact</a>
+        <a class="btn btn-filled" href="#contact"
+          ><span class="state-layer"></span>Start a project</a
+        >
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">AI · Analytics · Data</span>
+            <h1 class="display-l">
+              We turn noisy data into a signal you can act on.
+            </h1>
+            <p class="body-l">
+              Heaviside Labs is a consultancy that designs and ships AI
+              applications, analytics, and data platforms — the kind your team
+              can read, trust, and run without us in the room.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-filled" href="#contact"
+                ><span class="state-layer"></span>Start a project</a
+              >
+              <a class="btn btn-outlined" href="#approach"
+                ><span class="state-layer"></span>See how we work</a
+              >
+            </div>
+          </div>
+
+          <figure class="scope reveal">
+            <div class="scope-grid" aria-hidden="true"></div>
+            <div class="scope-head">
+              <span class="scope-label"
+                ><span class="scope-dot" aria-hidden="true"></span>CH.1 — RAW →
+                RESOLVED</span
+              >
+              <span class="scope-label">H(t)</span>
+            </div>
+            <svg
+              class="scope-svg"
+              viewBox="0 0 420 160"
+              preserveAspectRatio="none"
+              role="img"
+              aria-label="A noisy, irregular signal on the left resolves into a clean step function on the right."
+            >
+              <polyline
+                class="scope-noise"
+                points="0,96 12,80 24,108 36,72 48,116 60,84 72,120 84,68 96,104 108,88 120,60 132,110 144,76"
+              />
+              <path class="scope-step" d="M144,76 L188,76 L188,32 L420,32" />
+            </svg>
+            <div class="scope-caption">
+              <span>raw signal</span>
+              <span>resolved decision</span>
+            </div>
+            <figcaption class="scope-readouts">
+              <span class="readout">ingest → model</span>
+              <span class="readout">model → decision</span>
+              <span class="readout">decision → monitored</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ NAME STRIP / ABOUT ============ -->
+      <section class="strip" id="about">
+        <div class="wrap strip-grid">
+          <span class="eyebrow">The name</span>
+          <div class="reveal">
+            <p class="body-l">
+              Oliver Heaviside was a self-taught engineer who rewrote Maxwell's
+              equations into the compact form used today, and gave his name to
+              the step function — the simplest possible way to describe a system
+              flipping from one state to a clear, decided other.
+            </p>
+            <p class="body-l">
+              That's the job we sign up for. Most organizations don't have a
+              data problem so much as a <em>decision</em> problem: the data
+              exists, but nobody can act on it with confidence. We build the
+              models, pipelines, and dashboards that make the step from "we
+              think" to "we know."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="section" id="services">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">What we do</span>
+            <h2 class="headline-l">Three disciplines, one team.</h2>
+            <p class="body-l">
+              We work across the stack that turns data into decisions — often on
+              the same engagement, always with your team able to take it from
+              there.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="card reveal">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 2a5 5 0 0 0-5 5c0 2 1 3 1 5H8a2 2 0 0 0 0 4h.5"
+                  />
+                  <path
+                    d="M12 2a5 5 0 0 1 5 5c0 2-1 3-1 5h0a2 2 0 0 1-2 2h-2"
+                  />
+                  <path d="M9 18h6" />
+                  <path d="M10 21h4" />
+                </svg>
+              </div>
+              <h3>AI Applications &amp; PoCs</h3>
+              <p>
+                We build AI-powered applications and run tight proof-of-concept
+                sprints — the fastest way to find out if an idea works before
+                you commit real budget to it.
+              </p>
+              <ul class="card-list">
+                <li>Applications built on LLMs &amp; ML models</li>
+                <li>Proof-of-concept sprints</li>
+                <li>Rapid experimentation &amp; prototyping</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 19V10M10 19V5M16 19v-7M22 19H2" />
+                </svg>
+              </div>
+              <h3>Analytics &amp; Power BI</h3>
+              <p>
+                Power BI dashboards people actually open, backed by queries and
+                data models built to stay accurate as the data grows.
+              </p>
+              <ul class="card-list">
+                <li>Power BI dashboards &amp; reporting</li>
+                <li>Metric &amp; KPI design</li>
+                <li>Data analysis &amp; querying</li>
+              </ul>
+            </article>
+
+            <article class="card reveal">
+              <div class="card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+                  <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+                </svg>
+              </div>
+              <h3>Database Design</h3>
+              <p>
+                Schemas and data models structured so your reports and
+                applications stay fast and easy to reason about as they grow.
+              </p>
+              <ul class="card-list">
+                <li>Relational database design</li>
+                <li>Data modeling for reporting</li>
+                <li>Query &amp; schema optimization</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ APPROACH ============ -->
+      <section class="section chain" id="approach">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">How we work</span>
+            <h2 class="headline-l">A signal chain, not a black box.</h2>
+            <p class="body-l">
+              Four stages, run in order, each one handed to you in a state you
+              can inspect.
+            </p>
+          </div>
+
+          <svg
+            class="chain-svg reveal"
+            viewBox="0 0 1000 60"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              class="chain-path"
+              d="M60,50 L60,50 L310,50 L310,10 L560,10 L560,38 L810,38 L810,18 L950,18"
+            />
+          </svg>
+
+          <div class="chain-grid">
+            <div class="chain-step reveal">
+              <span class="chain-num">01 — CAPTURE</span>
+              <h4>Understand the data you have</h4>
+              <p>
+                We audit sources, quality, and gaps before proposing anything —
+                no architecture decided in a vacuum.
+              </p>
+            </div>
+            <div class="chain-step reveal">
+              <span class="chain-num">02 — MODEL</span>
+              <h4>Build the smallest thing that works</h4>
+              <p>
+                Pipelines, models, or dashboards, scoped to the decision they
+                need to support — not the trend of the year.
+              </p>
+            </div>
+            <div class="chain-step reveal">
+              <span class="chain-num">03 — SHIP</span>
+              <h4>Put it in front of real users</h4>
+              <p>
+                Deployed into your stack, documented, and handed off with your
+                team able to operate it independently.
+              </p>
+            </div>
+            <div class="chain-step reveal">
+              <span class="chain-num">04 — MONITOR</span>
+              <h4>Watch it, then tighten it</h4>
+              <p>
+                We instrument what we ship, so drift and edge cases surface
+                early instead of at the worst moment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DIFFERENTIATORS ============ -->
+      <section class="section" id="why">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Why Heaviside Labs</span>
+            <h2 class="headline-l">
+              Built to be understood, not just delivered.
+            </h2>
+          </div>
+
+          <div class="diff-grid reveal">
+            <div class="diff-item">
+              <h4>You own the code</h4>
+              <p>
+                Everything we build lives in your repositories, under your
+                license, from day one. No dependency on us to keep it running.
+              </p>
+            </div>
+            <div class="diff-item">
+              <h4>Senior hands, small team</h4>
+              <p>
+                You work directly with the people doing the work — no bench of
+                juniors learning on your engagement.
+              </p>
+            </div>
+            <div class="diff-item">
+              <h4>Scoped to a decision</h4>
+              <p>
+                Every engagement starts from the decision it needs to inform,
+                not the technology we'd like to use.
+              </p>
+            </div>
+            <div class="diff-item">
+              <h4>Plain-language handoff</h4>
+              <p>
+                Documentation and walkthroughs written for the team that
+                inherits the system, not for us to remember it later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CLIENTS ============ -->
+      <section class="section" id="clients">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Who we've worked with</span>
+            <h2 class="headline-l">Independent, engagement by engagement.</h2>
+          </div>
+
+          <div class="clients-grid reveal">
+            <div class="client-item">
+              <span class="client-name">Lamipak</span>
+              <span class="client-loc">China</span>
+              <p class="client-role">
+                GenAI product development — operational assistants &amp;
+                regulatory analytics, embedded in the AI research group.
+              </p>
+            </div>
+            <div class="client-item">
+              <span class="client-name">AISECT</span>
+              <span class="client-loc">India</span>
+              <p class="client-role">
+                AI-powered process automation as part of a digital
+                transformation initiative.
+              </p>
+            </div>
+            <div class="client-item">
+              <span class="client-name">Forta Health</span>
+              <span class="client-loc">USA</span>
+              <p class="client-role">
+                Open-source prompting research for medical LLMs, co-authored for
+                public benchmarks.
+              </p>
+            </div>
+            <div class="client-item">
+              <span class="client-name">nextin.py</span>
+              <span class="client-loc">India</span>
+              <p class="client-role">
+                Database and analytics platform design for an ed-tech startup.
+              </p>
+            </div>
+          </div>
+
+          <p class="clients-note reveal">
+            Also shipped smaller engagements for individual clients — custom
+            scripts, Analytics dashboards, AI automation, RAG and LLM
+            fine-tuning.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ CTA ============ -->
+      <section class="section" id="contact">
+        <div class="wrap">
+          <div class="cta reveal">
+            <div>
+              <h2>Have data. Need a decision.</h2>
+              <p class="cta-sub">
+                Tell us what you're trying to decide and what data you already
+                have. We'll tell you honestly whether we can help.
+              </p>
+            </div>
+            <a
+              class="btn btn-filled"
+              href="mailto:heavisidelabs.consultancy@gmail.com"
+              ><span class="state-layer"></span>Email
+              heavisidelabs.consultancy@gmail.com</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <a class="footer-brand" href="#top">
+            <img
+              class="brand-mark"
+              src="assets/mark.svg"
+              alt=""
+              width="26"
+              height="26"
+            />
+            <span>Heaviside Labs</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="#services">Services</a>
+            <a href="#approach">Approach</a>
+            <a href="#clients">Clients</a>
+            <a href="#about">About</a>
+            <a href="mailto:heavisidelabs.consultancy@gmail.com">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-meta">
+          © <span id="year">2026</span> Heaviside Labs. AI, Analytics &amp; Data
+          Consultancy.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
