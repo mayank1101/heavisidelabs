@@ -396,6 +396,15 @@ button { font: inherit; color: inherit; }
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
 .brand-mark { width: 32px; height: 32px; border-radius: var(--shape-sm); flex-shrink: 0; }
+.brand-mark-dark { display: none; }
+:root:not([data-theme="light"]) {
+  @media (prefers-color-scheme: dark) {
+    .brand-mark-light { display: none; }
+    .brand-mark-dark { display: inline-block; }
+  }
+}
+:root[data-theme="dark"] .brand-mark-light { display: none; }
+:root[data-theme="dark"] .brand-mark-dark { display: inline-block; }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 550;
@@ -649,47 +658,6 @@ button { font: inherit; color: inherit; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-}
-@media (min-width: 768px) {
-  .founder-row {
-    grid-template-columns: auto 1fr;
-    gap: 32px;
-    align-items: start;
-  }
-}
-@media (max-width: 640px) {
-  .founder-avatar-wrap {
-    justify-content: flex-start;
-  }
-}
-
-.founder-avatar-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.founder-photo {
-  width: 90px;
-  height: 90px;
-  border-radius: var(--shape-xl);
-  object-fit: cover;
-  object-position: center top;
-  border: 2px solid var(--md-primary);
-  box-shadow: 0 6px 20px color-mix(in srgb, var(--md-primary) 22%, transparent);
-  transition: transform 0.3s var(--motion-standard), box-shadow 0.3s var(--motion-standard);
-}
-.founder-photo:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--md-primary) 35%, transparent);
-}
-
-@media (min-width: 768px) {
-  .founder-photo {
-    width: 115px;
-    height: 115px;
-    border-radius: 24px;
-  }
 }
 
 .founder-info {
@@ -1081,8 +1049,8 @@ button { font: inherit; color: inherit; }
 }
 
 .client-logo-frame {
-  width: 64px;
   height: 64px;
+  min-width: 64px;
   border-radius: var(--shape-md);
   display: flex;
   align-items: center;
@@ -1093,13 +1061,14 @@ button { font: inherit; color: inherit; }
 }
 
 .client-logo-frame.large {
-  width: 68px;
   height: 68px;
+  min-width: 68px;
 }
 
 .client-logo-frame img {
-  width: 100%;
   height: 100%;
+  width: auto;
+  max-width: none;
   object-fit: contain;
 }
 
