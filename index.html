@@ -12,10 +12,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400..600&family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="canonical" href="https://heavisidelabs.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Heaviside Labs — AI, Analytics &amp; Data Consultancy" />
+    <meta
+      property="og:description"
+      content="Heaviside Labs builds production AI applications, decision analytics, and resilient data platforms — turning raw, noisy data into decisive signal your team can understand, own, and run."
+    />
+    <meta property="og:url" content="https://heavisidelabs.in/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Heaviside Labs — AI, Analytics &amp; Data Consultancy" />
+    <meta
+      name="twitter:description"
+      content="Heaviside Labs builds production AI applications, decision analytics, and resilient data platforms."
+    />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -66,7 +80,6 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              style="display: none"
             >
               <circle cx="12" cy="12" r="4" />
               <path
@@ -99,14 +112,18 @@
         </div>
       </div>
       <nav class="mobile-menu" id="mobile-menu" aria-label="Primary">
-        <a class="mobile-menu-link" href="#services">Services</a>
-        <a class="mobile-menu-link" href="#approach">Approach</a>
-        <a class="mobile-menu-link" href="case-studies.html">Case Studies</a>
-        <a class="mobile-menu-link" href="#about">About</a>
-        <a class="mobile-menu-link" href="#contact">Contact</a>
-        <a class="btn btn-filled" href="#contact"
-          ><span class="state-layer"></span>Start a project</a
-        >
+        <div class="mobile-menu-clip">
+          <div class="mobile-menu-inner">
+            <a class="mobile-menu-link" href="#services">Services</a>
+            <a class="mobile-menu-link" href="#approach">Approach</a>
+            <a class="mobile-menu-link" href="case-studies.html">Case Studies</a>
+            <a class="mobile-menu-link" href="#about">About</a>
+            <a class="mobile-menu-link" href="#contact">Contact</a>
+            <a class="btn btn-filled" href="#contact"
+              ><span class="state-layer"></span>Start a project</a
+            >
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -114,7 +131,7 @@
       <!-- ============ HERO ============ -->
       <section class="hero" id="top">
         <div class="wrap hero-grid">
-          <div class="hero-copy">
+          <div class="hero-copy reveal">
             <span class="eyebrow">AI · Analytics · Data Platforms</span>
             <h1 class="display-l">
               We turn noisy data into a signal you can act on.
@@ -208,143 +225,121 @@
             </p>
           </div>
 
-          <!-- About Origin & Step Function Diagram -->
-          <div class="about-hero-grid reveal">
-            <div class="about-story-card">
-              <div class="about-story-badge">
-                <span>ORIGIN &amp; PHILOSOPHY</span>
+          <!-- Differentiator Spec List -->
+          <div class="pillar-list reveal">
+            <div class="pillar-row">
+              <div class="pillar-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+                </svg>
               </div>
-              <h3 class="about-story-title">
-                The Heaviside Step Function: H(t) = 0 &rarr; 1
-              </h3>
-              <p class="about-story-p">
-                Oliver Heaviside was a self-taught mathematical physicist who
-                transformed modern electromagnetism by condensing Maxwell's 20
-                unwieldy equations into the elegant vector calculus used
-                worldwide today. He also formulated the
-                <strong>Heaviside Step Function</strong> &mdash; the universal
-                mathematical notation for an instantaneous, decisive transition
-                from state 0 to state 1.
-              </p>
-              <p class="about-story-p">
-                Most modern organizations do not have a data deficit; they have
-                a <strong>decision bottleneck</strong>. Unstructured documents,
-                noisy data stores, and unverified AI outputs create hesitation.
-                At Heaviside Labs, we engineer the models, schemas, and
-                guardrails that make that decisive step: turning ambiguity into
-                deterministic business execution.
-              </p>
-            </div>
-
-            <div class="about-diagram-card">
-              <div class="step-diagram-header">
-                <span class="step-diagram-tag">SYSTEM DYNAMICS</span>
-                <span class="step-formula">H(t): Noise &rarr; Signal</span>
-              </div>
-
-              <div class="step-flow">
-                <!-- State 0 -->
-                <div class="step-state step-state-before">
-                  <div class="step-state-badge">STATE 0 &middot; AMBIGUITY</div>
-                  <ul class="step-state-list">
-                    <li>Unstructured PDFs &amp; Manual Ops</li>
-                    <li>Noisy Data &amp; Unverified LLMs</li>
-                    <li>Slow Diagnostic Turnaround</li>
-                  </ul>
-                </div>
-
-                <!-- The Transition Step -->
-                <div class="step-transition">
-                  <div class="step-pulse-line"></div>
-                  <div class="step-node">
-                    <span class="step-node-icon">&Theta;(t)</span>
-                    <span class="step-node-label">Heaviside Labs Core</span>
-                  </div>
-                  <div class="step-pulse-line"></div>
-                </div>
-
-                <!-- State 1 -->
-                <div class="step-state step-state-after">
-                  <div class="step-state-badge">
-                    STATE 1 &middot; DETERMINISTIC SIGNAL
-                  </div>
-                  <ul class="step-state-list">
-                    <li>10,000+ Factory Operators Powered</li>
-                    <li>72.6% MedQA Clinical SOTA Accuracy</li>
-                    <li>99% Machine Troubleshooting Speedup</li>
-                  </ul>
-                </div>
+              <div class="pillar-content">
+                <h4>Research-Grade AI Rigor</h4>
+                <p>
+                  We don't build superficial wrappers around vendor APIs. We
+                  engineer validated prompt-architectures, multimodal RAG
+                  systems, and hallucination guardrails backed by
+                  peer-reviewed research published at leading AI venues like
+                  AAAI 2024.
+                </p>
               </div>
             </div>
-          </div>
 
-          <!-- 3 Pillars of Engineering -->
-          <div class="about-pillars-grid reveal">
-            <div class="pillar-card">
-              <div class="pillar-num">01</div>
-              <h4>Research-Grade AI Rigor</h4>
-              <p>
-                We don't build superficial wrappers around vendor APIs. We
-                engineer validated prompt-architectures, multimodal RAG systems,
-                and hallucination guardrails backed by peer-reviewed research
-                published at leading AI venues like AAAI 2024.
-              </p>
+            <div class="pillar-row">
+              <div class="pillar-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="4" width="18" height="6" rx="1.5" />
+                  <rect x="3" y="14" width="18" height="6" rx="1.5" />
+                  <circle cx="7" cy="7" r="0.8" fill="currentColor" stroke="none" />
+                  <circle cx="7" cy="17" r="0.8" fill="currentColor" stroke="none" />
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>Production Over Prototypes</h4>
+                <p>
+                  We execute rapid 2–4 week AI PoC sprints designed from day
+                  one with containerization, low-latency telemetry, strict
+                  role-based access, and automated test suites so systems
+                  transition seamlessly into production workloads.
+                </p>
+              </div>
             </div>
 
-            <div class="pillar-card">
-              <div class="pillar-num">02</div>
-              <h4>Production Over Prototypes</h4>
-              <p>
-                We execute rapid 2–4 week AI PoC sprints designed from day one
-                with containerization, low-latency telemetry, strict role-based
-                access, and automated test suites so systems transition
-                seamlessly into production workloads.
-              </p>
-            </div>
-
-            <div class="pillar-card">
-              <div class="pillar-num">03</div>
-              <h4>100% Client Code Sovereignty</h4>
-              <p>
-                Zero vendor lock-in, zero proprietary runtime black boxes. All
-                intellectual property, models, SQL migrations, and documentation
-                live in your repositories from commit one, with comprehensive
-                handover for your in-house teams.
-              </p>
+            <div class="pillar-row">
+              <div class="pillar-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
+                  <polyline points="9 12 11 14 15 9.5" />
+                </svg>
+              </div>
+              <div class="pillar-content">
+                <h4>100% Client Code Sovereignty</h4>
+                <p>
+                  Zero vendor lock-in, zero proprietary runtime black boxes.
+                  All intellectual property, models, SQL migrations, and
+                  documentation live in your repositories from commit one,
+                  with comprehensive handover for your in-house teams.
+                </p>
+              </div>
             </div>
           </div>
 
           <!-- Founder & Principal Consultant Spotlight -->
-          <div class="founder-card reveal">
-            <div class="founder-avatar-wrap">
-              <img
-                src="assets/profile.png"
-                alt="Mayank Sharma - Founder &amp; Principal AI Consultant"
-                class="founder-photo"
-                loading="lazy"
-              />
-            </div>
-            <div class="founder-info">
-              <div class="founder-badge-row">
-                <span class="client-tag"
-                  >Founder &amp; Data Science Consultant</span
-                >
-                <span class="client-loc">M.Tech CSE · IIT Jammu</span>
+          <div class="founder-profile reveal">
+            <span class="eyebrow">Led by</span>
+            <div class="founder-row">
+              <div class="founder-avatar-wrap">
+                <img
+                  src="assets/profile.png"
+                  alt="Mayank Sharma - Founder &amp; Principal AI Consultant"
+                  class="founder-photo"
+                  loading="lazy"
+                />
               </div>
-              <h3 class="founder-name">Mayank Sharma</h3>
-              <p class="founder-bio">
-                Independent Data Scientist & Analytics Consultant, published AI
-                researcher (co-author of peer-reviewed paper at AAAI 2024 on
-                clinical LLM benchmarks), and postgraduate alumnus of the Indian
-                Institute of Technology (IIT Jammu) in Computer Science &amp;
-                Engineering.
-              </p>
-              <p class="founder-bio">
-                Directly executes all client engagements from data modeling and
-                multimodal RAG pipelines through to enterprise database
-                architecture and production deployment.
-              </p>
-              <div class="founder-credentials-row">
+              <div class="founder-info">
+                <div class="founder-badge-row">
+                  <span class="client-tag"
+                    >Founder &amp; Data Science Consultant</span
+                  >
+                  <span class="client-loc">M.Tech CSE · IIT Jammu</span>
+                </div>
+                <h3 class="founder-name">Mayank Sharma</h3>
+                <p class="founder-bio">
+                  Independent Data Scientist & Analytics Consultant, published AI
+                  researcher (co-author of peer-reviewed paper at AAAI 2024 on
+                  clinical LLM benchmarks), and postgraduate alumnus of the Indian
+                  Institute of Technology (IIT Jammu) in Computer Science &amp;
+                  Engineering.
+                </p>
+                <p class="founder-bio">
+                  Directly executes all client engagements from data modeling and
+                  multimodal RAG pipelines through to enterprise database
+                  architecture and production deployment.
+                </p>
+                <div class="founder-credentials-row">
                 <div class="founder-cred-chip">
                   <span class="cred-label">Education:</span> M.Tech in CSE, IIT
                   Jammu
@@ -367,29 +362,6 @@
               </div>
 
               <div class="founder-social-links">
-                <!--<a
-                  class="founder-link-btn"
-                  href="https://www.hellomayank.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Personal Portfolio Website"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="15"
-                    height="15"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                    <path d="M2 12h20" />
-                  </svg>
-                  <span>hellomayank.in &nearr;</span>
-                </a>-->
                 <a
                   class="founder-link-btn"
                   href="https://www.linkedin.com/in/mayank-sharma-924615405/"
@@ -428,6 +400,7 @@
                   </svg>
                   <span>GitHub &nearr;</span>
                 </a>
+                </div>
               </div>
             </div>
           </div>
@@ -447,9 +420,9 @@
             </p>
           </div>
 
-          <div class="card-grid">
+          <div class="service-grid">
             <!-- Service 1 -->
-            <article class="card reveal">
+            <article class="service-item reveal">
               <div class="card-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -489,7 +462,7 @@
             </article>
 
             <!-- Service 2 -->
-            <article class="card reveal">
+            <article class="service-item reveal">
               <div class="card-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -522,7 +495,7 @@
             </article>
 
             <!-- Service 3 -->
-            <article class="card reveal">
+            <article class="service-item reveal">
               <div class="card-icon">
                 <svg
                   viewBox="0 0 24 24"
@@ -697,363 +670,81 @@
             </div>
           </div>
 
-          <!-- Client Showcase Component -->
-          <div
-            class="client-showcase reveal"
-            id="impact-carousel"
-            role="region"
-            aria-label="Client Engagements Showcase"
-          >
-            <!-- Prominent Company Logos Tab Bar -->
-            <div
-              class="client-tabs-bar"
-              role="tablist"
-              aria-label="Client selector"
-            >
-              <button
-                class="client-tab-btn is-active"
-                type="button"
-                role="tab"
-                data-index="0"
-                aria-selected="true"
-                aria-controls="slide-0"
-              >
-                <div class="client-tab-logo">
-                  <img src="assets/clients/lamipak-logo.png" alt="Lamipak" />
-                </div>
-                <span class="client-tab-name">Lamipak</span>
-              </button>
-              <button
-                class="client-tab-btn"
-                type="button"
-                role="tab"
-                data-index="1"
-                aria-selected="false"
-                aria-controls="slide-1"
-              >
-                <div class="client-tab-logo">
-                  <img
-                    src="assets/clients/forta-health-logo.png"
-                    alt="Forta Health"
-                  />
-                </div>
-                <span class="client-tab-name">Forta Health</span>
-              </button>
-              <button
-                class="client-tab-btn"
-                type="button"
-                role="tab"
-                data-index="2"
-                aria-selected="false"
-                aria-controls="slide-2"
-              >
-                <div class="client-tab-logo">
-                  <img src="assets/clients/nextinpy-logo.png" alt="Nextin.py" />
-                </div>
-                <span class="client-tab-name">Nextin.py</span>
-              </button>
-              <button
-                class="client-tab-btn"
-                type="button"
-                role="tab"
-                data-index="3"
-                aria-selected="false"
-                aria-controls="slide-3"
-              >
-                <div class="client-tab-logo">
-                  <img src="assets/clients/aisect-logo.png" alt="AISECT" />
-                </div>
-                <span class="client-tab-name">AISECT</span>
-              </button>
-            </div>
-
-            <!-- Showcase Viewport & Track -->
-            <div class="carousel-viewport">
-              <div class="carousel-track">
-                <!-- Slide 0: Lamipak -->
-                <div
-                  class="carousel-slide is-active"
-                  id="slide-0"
-                  data-index="0"
-                  role="tabpanel"
-                  aria-label="Lamipak"
-                >
-                  <div class="showcase-card">
-                    <div class="showcase-content">
-                      <div class="showcase-badge-row">
-                        <span class="client-tag">Enterprise GenAI</span>
-                        <span class="client-loc">Kunshan, China</span>
-                      </div>
-                      <h3 class="showcase-title">
-                        Scaled Multilingual AI to 10,000+ Factory Floor
-                        Operators with 99% Diagnostic Speedup
-                      </h3>
-                      <p class="showcase-desc">
-                        Architected LamiOps (real-time multimodal equipment
-                        diagnostic assistant with strict hallucination
-                        guardrails) and LamiTracker (global regulatory
-                        intelligence platform across 18+ countries).
-                      </p>
-                      <div class="showcase-footer">
-                        <a
-                          class="btn btn-filled"
-                          href="case-studies.html#lamipak"
-                        >
-                          <span class="state-layer"></span>Read Case Study
-                          &rarr;
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="showcase-stats">
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">10,000+</span>
-                        <span class="showcase-stat-lbl"
-                          >Floor Operators Deployed</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">99%</span>
-                        <span class="showcase-stat-lbl"
-                          >Diagnostic Time Cut</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">95%</span>
-                        <span class="showcase-stat-lbl"
-                          >Compliance Research Saved</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 1: Forta Health -->
-                <div
-                  class="carousel-slide"
-                  id="slide-1"
-                  data-index="1"
-                  role="tabpanel"
-                  aria-label="Forta Health"
-                >
-                  <div class="showcase-card">
-                    <div class="showcase-content">
-                      <div class="showcase-badge-row">
-                        <span class="client-tag">Clinical AI Research</span>
-                        <span class="client-loc">San Francisco, USA</span>
-                      </div>
-                      <h3 class="showcase-title">
-                        Co-Authored SOTA Clinical Foundation Model Benchmark
-                        Published at AAAI 2024
-                      </h3>
-                      <p class="showcase-desc">
-                        Co-authored OpenMedLM, establishing that structured
-                        prompt-engineering architectures achieve 72.6% accuracy
-                        on MedQA while outperforming fine-tuning at lower
-                        compute costs.
-                      </p>
-                      <div class="showcase-footer">
-                        <a
-                          class="btn btn-filled"
-                          href="case-studies.html#forta-health"
-                        >
-                          <span class="state-layer"></span>Read Case Study
-                          &rarr;
-                        </a>
-                        <a
-                          class="btn btn-outlined"
-                          href="https://arxiv.org/abs/2402.19371"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span class="state-layer"></span>arXiv:2402.19371
-                          &nearr;
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="showcase-stats">
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">72.6%</span>
-                        <span class="showcase-stat-lbl"
-                          >MedQA (SOTA Accuracy)</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">&gt;80%</span>
-                        <span class="showcase-stat-lbl"
-                          >MMLU Medical Subset</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">AAAI '24</span>
-                        <span class="showcase-stat-lbl"
-                          >Peer-Reviewed Proceedings</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 2: Nextin.py -->
-                <div
-                  class="carousel-slide"
-                  id="slide-2"
-                  data-index="2"
-                  role="tabpanel"
-                  aria-label="Nextin.py"
-                >
-                  <div class="showcase-card">
-                    <div class="showcase-content">
-                      <div class="showcase-badge-row">
-                        <span class="client-tag"
-                          >Education Tech &amp; EdTech</span
-                        >
-                        <span class="client-loc">India</span>
-                      </div>
-                      <h3 class="showcase-title">
-                        Built Business Website and designed database schema for
-                        educational platform using Supabase, Cutting OpEx by 80%
-                      </h3>
-                      <p class="showcase-desc">
-                        Modernized high-touch manual WhatsApp operations into an
-                        automated global learning platform, driving an 80%
-                        reduction in operating costs and a 60% lift in student
-                        engagement.
-                      </p>
-                      <div class="showcase-footer">
-                        <a
-                          class="btn btn-filled"
-                          href="case-studies.html#nextinpy"
-                        >
-                          <span class="state-layer"></span>Read Case Study
-                          &rarr;
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="showcase-stats">
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">-80%</span>
-                        <span class="showcase-stat-lbl"
-                          >Operational Cost Cut</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">+60%</span>
-                        <span class="showcase-stat-lbl"
-                          >Student Engagement Lift</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">Postgres</span>
-                        <span class="showcase-stat-lbl"
-                          >Supabase Cloud Infrastructure</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 3: AISECT -->
-                <div
-                  class="carousel-slide"
-                  id="slide-3"
-                  data-index="3"
-                  role="tabpanel"
-                  aria-label="AISECT"
-                >
-                  <div class="showcase-card">
-                    <div class="showcase-content">
-                      <div class="showcase-badge-row">
-                        <span class="client-tag">Process Automation</span>
-                        <span class="client-loc">India</span>
-                      </div>
-                      <h3 class="showcase-title">
-                        End-to-End Reimbursement Claim Automation with Document
-                        AI &amp; Policy OCR
-                      </h3>
-                      <p class="showcase-desc">
-                        Replaced manual multi-tier invoice audits with automated
-                        document OCR parsing, policy rule validation, and
-                        seamless integration with enterprise HRMS &amp;
-                        accounting systems.
-                      </p>
-                      <div class="showcase-footer">
-                        <a
-                          class="btn btn-filled"
-                          href="case-studies.html#aisect"
-                        >
-                          <span class="state-layer"></span>Read Case Study
-                          &rarr;
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="showcase-stats">
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">100%</span>
-                        <span class="showcase-stat-lbl">Automated Parsing</span>
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">Minutes</span>
-                        <span class="showcase-stat-lbl"
-                          >Turnaround vs Days</span
-                        >
-                      </div>
-                      <div class="showcase-stat-box">
-                        <span class="showcase-stat-num">Audit</span>
-                        <span class="showcase-stat-lbl"
-                          >Full Enterprise Compliance</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Controls & Dots -->
-            <div class="showcase-controls">
-              <button
-                class="carousel-nav-btn"
-                id="carousel-prev"
-                type="button"
-                aria-label="Previous client"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <div
-                class="carousel-dots"
-                id="carousel-dots"
-                aria-label="Slide indicators"
-              ></div>
-              <button
-                class="carousel-nav-btn"
-                id="carousel-next"
-                type="button"
-                aria-label="Next client"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
+          <!-- Client Logo Marquee -->
+          <div class="logo-marquee reveal" role="region" aria-label="Client companies">
+            <div class="logo-marquee-track">
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak">
+                <img src="assets/clients/lamipak-logo.png" alt="Lamipak logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health">
+                <img src="assets/clients/forta-health-logo.png" alt="Forta Health logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy">
+                <img src="assets/clients/nextinpy-logo.png" alt="Nextin.py logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect">
+                <img src="assets/clients/aisect-logo.png" alt="AISECT logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak">
+                <img src="assets/clients/lamipak-logo.png" alt="Lamipak logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health">
+                <img src="assets/clients/forta-health-logo.png" alt="Forta Health logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy">
+                <img src="assets/clients/nextinpy-logo.png" alt="Nextin.py logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect">
+                <img src="assets/clients/aisect-logo.png" alt="AISECT logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak">
+                <img src="assets/clients/lamipak-logo.png" alt="Lamipak logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health">
+                <img src="assets/clients/forta-health-logo.png" alt="Forta Health logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy">
+                <img src="assets/clients/nextinpy-logo.png" alt="Nextin.py logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect">
+                <img src="assets/clients/aisect-logo.png" alt="AISECT logo" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/lamipak-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/forta-health-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/nextinpy-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/aisect-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/lamipak-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/forta-health-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/nextinpy-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/aisect-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#lamipak" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/lamipak-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#forta-health" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/forta-health-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#nextinpy" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/nextinpy-logo.png" alt="" />
+              </a>
+              <a class="logo-marquee-logo" href="case-studies.html#aisect" aria-hidden="true" tabindex="-1">
+                <img src="assets/clients/aisect-logo.png" alt="" />
+              </a>
             </div>
           </div>
 

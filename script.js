@@ -9,8 +9,6 @@
 
   // Theme toggle (persists in localStorage, defaults to system preference)
   const toggle = document.getElementById('theme-toggle');
-  const iconDark = document.getElementById('theme-icon-dark');
-  const iconLight = document.getElementById('theme-icon-light');
   const root = document.documentElement;
   const stored = localStorage.getItem('hvs-theme');
 
@@ -24,8 +22,6 @@
     }
     const isDark = theme ? theme === 'dark' : systemPrefersDark();
     toggle.setAttribute('aria-pressed', String(isDark));
-    iconDark.style.display = isDark ? 'none' : 'block';
-    iconLight.style.display = isDark ? 'block' : 'none';
   };
 
   applyTheme(stored);
@@ -96,153 +92,5 @@
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
-  }
-
-  // Work Impact Carousel Controller
-  const carouselEl = document.getElementById('impact-carousel');
-  if (carouselEl) {
-    const track = carouselEl.querySelector('.carousel-track');
-    const slides = Array.from(carouselEl.querySelectorAll('.carousel-slide'));
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    const dotsContainer = document.getElementById('carousel-dots');
-    let currentIndex = 0;
-    let autoPlayTimer = null;
-    const autoPlayInterval = 5500;
-
-    // Client tab buttons
-    const tabBtns = Array.from(carouselEl.querySelectorAll('.client-tab-btn'));
-    tabBtns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        goToSlide(idx);
-        restartAutoPlay();
-      });
-    });
-
-    // Build pagination dots
-    dotsContainer.innerHTML = '';
-    const dots = slides.map((slide, idx) => {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot';
-      dot.setAttribute('type', 'button');
-      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-      dot.addEventListener('click', () => {
-        goToSlide(idx);
-        restartAutoPlay();
-      });
-      dotsContainer.appendChild(dot);
-      return dot;
-    });
-
-    const updateCarousel = () => {
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      slides.forEach((slide, idx) => {
-        const isActive = idx === currentIndex;
-        slide.classList.toggle('is-active', isActive);
-        slide.setAttribute('aria-hidden', String(!isActive));
-      });
-      tabBtns.forEach((btn, idx) => {
-        const isActive = idx === currentIndex;
-        btn.classList.toggle('is-active', isActive);
-        btn.setAttribute('aria-selected', String(isActive));
-      });
-      dots.forEach((dot, idx) => {
-        const isActive = idx === currentIndex;
-        dot.classList.toggle('is-active', isActive);
-        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
-      });
-    };
-
-    const goToSlide = (index) => {
-      currentIndex = (index + slides.length) % slides.length;
-      updateCarousel();
-    };
-
-    const nextSlide = () => goToSlide(currentIndex + 1);
-    const prevSlide = () => goToSlide(currentIndex - 1);
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        prevSlide();
-        restartAutoPlay();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        nextSlide();
-        restartAutoPlay();
-      });
-    }
-
-    // Auto Play with pause on hover/focus
-    const startAutoPlay = () => {
-      stopAutoPlay();
-      autoPlayTimer = setInterval(nextSlide, autoPlayInterval);
-    };
-
-    const stopAutoPlay = () => {
-      if (autoPlayTimer) {
-        clearInterval(autoPlayTimer);
-        autoPlayTimer = null;
-      }
-    };
-
-    const restartAutoPlay = () => {
-      stopAutoPlay();
-      startAutoPlay();
-    };
-
-    carouselEl.addEventListener('mouseenter', stopAutoPlay);
-    carouselEl.addEventListener('mouseleave', startAutoPlay);
-    carouselEl.addEventListener('focusin', stopAutoPlay);
-    carouselEl.addEventListener('focusout', startAutoPlay);
-
-    // Keyboard navigation
-    carouselEl.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        prevSlide();
-        restartAutoPlay();
-      } else if (e.key === 'ArrowRight') {
-        nextSlide();
-        restartAutoPlay();
-      }
-    });
-
-    // Touch / Swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const viewport = carouselEl.querySelector('.carousel-viewport');
-
-    if (viewport) {
-      viewport.addEventListener(
-        'touchstart',
-        (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        },
-        { passive: true }
-      );
-
-      viewport.addEventListener(
-        'touchend',
-        (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 40) {
-            if (diff > 0) {
-              nextSlide();
-            } else {
-              prevSlide();
-            }
-            restartAutoPlay();
-          }
-        },
-        { passive: true }
-      );
-    }
-
-    // Initialize
-    updateCarousel();
-    startAutoPlay();
   }
 })();

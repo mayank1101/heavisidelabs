@@ -14,8 +14,8 @@ We build AI-powered applications and run tight proof-of-concept sprints — the 
 **Analytics & Power BI**  
 Power BI dashboards people actually open, backed by queries and data models built to stay accurate as the data grows.
 
-**Database Design**  
-Schemas and data models structured so your reports and applications stay fast and easy to reason about as they grow.
+**Database & Data Platform Design**  
+Schemas, migrations, and cloud database infrastructure structured so your reports and applications stay fast and easy to reason about as they grow.
 
 ## Approach
 
