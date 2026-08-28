@@ -1,39 +1,22 @@
 (() => {
   'use strict';
 
-  // Top app bar elevation on scroll
+  // Top app bar elevation once the page leaves the very top.
+  // IntersectionObserver on a 1px sentinel avoids a scroll-event listener.
   const topbar = document.getElementById('topbar');
-  const setScrolled = () => topbar.classList.toggle('is-scrolled', window.scrollY > 4);
-  setScrolled();
-  window.addEventListener('scroll', setScrolled, { passive: true });
-
-  // Theme toggle (persists in localStorage, defaults to system preference)
-  const toggle = document.getElementById('theme-toggle');
-  const root = document.documentElement;
-  const stored = localStorage.getItem('hvs-theme');
-
-  const systemPrefersDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  const applyTheme = (theme) => {
-    if (theme) {
-      root.setAttribute('data-theme', theme);
+  if (topbar) {
+    const sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none;';
+    document.body.prepend(sentinel);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(
+        ([entry]) => topbar.classList.toggle('is-scrolled', !entry.isIntersecting)
+      ).observe(sentinel);
     } else {
-      root.removeAttribute('data-theme');
+      topbar.classList.add('is-scrolled');
     }
-    const isDark = theme ? theme === 'dark' : systemPrefersDark();
-    toggle.setAttribute('aria-pressed', String(isDark));
-  };
-
-  applyTheme(stored);
-
-  toggle.addEventListener('click', () => {
-    const currentlyDark = root.getAttribute('data-theme')
-      ? root.getAttribute('data-theme') === 'dark'
-      : systemPrefersDark();
-    const next = currentlyDark ? 'light' : 'dark';
-    localStorage.setItem('hvs-theme', next);
-    applyTheme(next);
-  });
+  }
 
   // Mobile menu
   const menuToggle = document.getElementById('menu-toggle');
@@ -74,11 +57,12 @@
   if (!reduceMotion && 'IntersectionObserver' in window) {
     document.documentElement.classList.add('motion-ready');
     const revealEls = document.querySelectorAll('.reveal');
+    const show = (el) => el.classList.add('is-visible');
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            show(entry.target);
             io.unobserve(entry.target);
           }
         });
@@ -86,6 +70,23 @@
       { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     );
     revealEls.forEach((el) => io.observe(el));
+
+    // Safety net: a fast scroll (or scrollbar drag) can skip an element between
+    // observer frames and leave it stuck hidden. After scrolling settles, reveal
+    // anything already at or above the fold. 'scrollend' is not a scroll listener.
+    const sweep = () => {
+      revealEls.forEach((el) => {
+        if (el.classList.contains('is-visible')) return;
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+          show(el);
+          io.unobserve(el);
+        }
+      });
+    };
+    if ('onscrollend' in window) {
+      window.addEventListener('scrollend', sweep, { passive: true });
+    }
+    window.addEventListener('hashchange', () => setTimeout(sweep, 400));
   }
 
   // Footer year
