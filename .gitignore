@@ -78,6 +78,8 @@ brain/
 *.chat
 *.chat.json
 
-
+# Designe Settings
+.impeccable/
+DESIGN.md
 # temporary file
 tmp.txt
